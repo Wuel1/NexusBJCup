@@ -44,7 +44,7 @@ void setup() {
   pinMode(INT1, OUTPUT);
   pinMode(INT2, OUTPUT);
   pinMode(INT3, OUTPUT);
-  pinMode(INT3, OUTPUT);
+  pinMode(INT4, OUTPUT);
   pinMode(ENA, OUTPUT);
   pinMode(ENB, OUTPUT);
   pinMode(detector_90_direita,INPUT);
@@ -218,17 +218,17 @@ void virar_esquerda(){
 void testar_90_graus(bool leituraDireita, bool leituraEsqueda){
   
   if(leituraDireita){
-    setVelocidade(velocidadeInicial-10);
+    setVelocidade(velocidadeInicial-20);
     frente();
-    delay(10);
     girar_eixo_direita();
+    delay(20);
     delay(375);
     parar();
   }
   if(leituraEsqueda){
-    setVelocidade(velocidadeInicial-10);
+    setVelocidade(velocidadeInicial-20);
     frente();
-    delay(10);
+    delay(20);
     girar_eixo_esquerda();
     delay(375);
     parar();
